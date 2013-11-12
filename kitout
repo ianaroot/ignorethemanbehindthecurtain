@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sh homebrew/install.sh
+sh homebrew-tap-phinze/install.sh
