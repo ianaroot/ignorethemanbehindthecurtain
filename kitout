@@ -1,4 +1,6 @@
 #!/bin/sh
 
+sh xcode/install.sh
+sh remote-login/install.sh
 sh homebrew/install.sh
 sh homebrew-tap-phinze/install.sh
