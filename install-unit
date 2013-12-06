@@ -1,0 +1,36 @@
+#!/bin/sh
+
+set -e # Exit if any command fails
+
+# If multiple args given run this script once for each arg
+test $2 && {
+  for arg in $@
+    do $0 $arg
+  done
+  exit
+}
+
+# ---
+
+unit_name=$1
+guard_file="$unit_name/installed.sh"
+
+# Exit if there's a guard file and the guard detects an install
+test -f $guard_file && sh $guard_file && {
+  echo "-* $unit_name installed"
+  exit
+}
+
+# Otherwise install deps
+deps_file="$unit_name/deps"
+test -f $deps_file && $0 `cat $deps_file`
+
+# Then install unit
+echo "-* installing $unit_name"
+sh "$unit_name/install.sh"
+
+# Exit error if the guard still doesn't pass after install
+test -f $guard_file && sh $guard_file || {
+  echo "-* $unit_name install script finished but installed test failed"
+  exit 1
+}
