@@ -9,7 +9,8 @@ know how a currently manual step could be automated.
 
 ## Prerequsites
 
-A clean install of the latest version of OS X.
+A clean install of the latest version of OS X. The username should be
+apprentice. You know what the password should be.
 
 ## Kitout a DBC Workstation
 
