@@ -21,6 +21,33 @@ Install kitout
     cd /usr/local/opt
     git clone https://github.com/Devbootcamp/kitout.git
     cd kitout
+
+Then run it
+
+    ./kitout
+
+## Kitout Your Machine
+
+Install kitout
+
+    sudo mkdir -p /usr/local/opt
+    sudo chown -R $USER /usr/local
+    cd /usr/local/opt
+    git clone https://github.com/Devbootcamp/kitout.git
+    cd kitout
+
+Then create a `_blacklist` file and include in it the units you don't want
+installed on your machine, an example `_blacklist` might look like:
+
+    # Don't allow people to ssh into my machine
+    remote-login
+    # I installed chrome with the installer so it's in /Applications
+    google-chrome
+    # Same for sublime
+    sublime
+
+Now run kitout and blacklisted units will be skipped
+
     ./kitout
 
 ## Usage & Development
