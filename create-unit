@@ -7,4 +7,10 @@ touch $name/deps
 touch $name/readme.md
 touch $name/install.sh
 touch $name/installed.sh
-exec $EDITOR $name/readme.md
+
+which -s subl && {
+  subl $name/readme.md
+  subl $name/deps
+  subl $name/install.sh
+  subl $name/installed.sh
+}
