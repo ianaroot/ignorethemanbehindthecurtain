@@ -1,1 +1,1 @@
-softwareupdate --install --all
+sudo softwareupdate --install --all
