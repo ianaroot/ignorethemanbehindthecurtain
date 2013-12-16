@@ -2,6 +2,12 @@
 
 set -e
 name=$1
+
+test $name || {
+  echo "Usage: $0 name-of-unit"
+  exit
+}
+
 mkdir $name
 touch $name/deps
 touch $name/readme.md
