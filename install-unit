@@ -13,8 +13,17 @@ test $2 && {
 # ---
 
 unit_name=$1
-deps_file="$unit_name/deps"
-guard_file="$unit_name/installed.sh"
+unit_dir=$unit_name
+test -d _units/$unit_name && unit_dir=_units/$unit_name
+
+deps_file="$unit_dir/deps"
+guard_file="$unit_dir/installed.sh"
+install_file="$unit_dir/install.sh"
+
+test -d $unit_dir || {
+  echo "-* $unit_name not found"
+  exit 1
+}
 
 # Skip if this unit or any deps are blacklisted
 test -f _blacklist && {
@@ -43,7 +52,7 @@ test -f $deps_file && $0 `cat $deps_file`
 
 # Then install unit
 echo "-* installing $unit_name"
-sh "$unit_name/install.sh"
+sh $install_file
 
 # Exit error if the guard still doesn't pass after install
 test -f $guard_file && (sh $guard_file || {
