@@ -46,7 +46,7 @@ echo "-* installing $unit_name"
 sh "$unit_name/install.sh"
 
 # Exit error if the guard still doesn't pass after install
-test -f $guard_file && sh $guard_file || {
+test -f $guard_file && (sh $guard_file || {
   echo "-* $unit_name install script finished but installed test failed"
   exit 1
-}
+})
