@@ -49,8 +49,8 @@ Now run kitout and blacklisted units will be skipped
 
 This is how you modify Kitout:
 
-First, create a unit. A unit is a folder. A unit sets up **one** aspect of the
-machine. That's why it's called a unit.
+First, create a unit: `./create-unit unit-name`. A unit is a folder. A unit 
+sets up **one** aspect of the machine. That's why it's called a unit.
 
 Units have four kind of files (that kitout cares about):
 
