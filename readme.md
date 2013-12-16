@@ -30,12 +30,13 @@ This is how you kitout:
 First, create a unit. A unit is a folder. A unit sets up **one** aspect of the
 machine. That's why it's called a unit.
 
-Units have three kind of files (that kitout cares about):
+Units have four kind of files (that kitout cares about):
 
-* The `install.sh` shell script should install the unit
-* The `installed.sh` script should exit with zero if the unit is already
-  installed.
-* The `deps` file should be a list of units that this unit depends on
+* `readme.md` - includes a sentence that justifies why this is in the kit
+* `install.sh` - a script that should install the unit
+* `installed.sh` - a script that should exit with a zero status code if the unit
+  is already installed.
+* `deps` file should be a list of units that this unit depends on
 
 Run your unit with `install-unit`. Run all units with `kitout`.
 
