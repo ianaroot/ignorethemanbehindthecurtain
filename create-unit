@@ -6,4 +6,4 @@ mkdir $name
 touch $name/deps
 touch $name/install.sh
 touch $name/installed.sh
-exec $EDITOR $name/install.sh
+exec $EDITOR $name/deps
