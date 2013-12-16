@@ -8,7 +8,7 @@ how a currently manual step could be automated.
 
 ## Prerequsites
 
-A clean install of OS X Mavericks. The username should be `apprentice`. Ask
+A clean install of OS X 10.9 (Mavericks). The username should be `apprentice`. Ask
 [myles@devbootcamp.com](mailto:myles@devbootcamp.com) for the password.
 
 ## Kitout a DBC Workstation
@@ -16,7 +16,7 @@ A clean install of OS X Mavericks. The username should be `apprentice`. Ask
 Install kitout
 
     sudo mkdir -p /usr/local/opt
-    # A comment explaining the chown command below.
+    # Changes the ownership of /usr/local to your user (not root)
     sudo chown -R $USER /usr/local
     cd /usr/local/opt
     git clone https://github.com/Devbootcamp/kitout.git
