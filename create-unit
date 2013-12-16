@@ -4,6 +4,7 @@ set -e
 name=$1
 mkdir $name
 touch $name/deps
+touch $name/readme.md
 touch $name/install.sh
 touch $name/installed.sh
-exec $EDITOR $name/deps
+exec $EDITOR $name/readme.md
