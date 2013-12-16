@@ -13,7 +13,24 @@ test $2 && {
 # ---
 
 unit_name=$1
+deps_file="$unit_name/deps"
 guard_file="$unit_name/installed.sh"
+
+# Skip if this unit or any deps are blacklisted
+test -f _blacklist && {
+  (grep -v '^#' _blacklist | grep -x -q "^$unit_name\$" -) && {
+    echo "-* skipping blacklisted $unit_name"
+    exit
+  }
+  test -f $deps_file && {
+    for dep_name in `<$deps_file` ; do
+      (grep -v '^#' _blacklist | grep -x -q $dep_name -) && {
+        echo "-* skipping $unit_name due to blacklisted dep $dep_name"
+        exit
+      }
+    done
+  }
+}
 
 # Exit if there's a guard file and the guard detects an install
 test -f $guard_file && sh $guard_file && {
@@ -22,7 +39,6 @@ test -f $guard_file && sh $guard_file && {
 }
 
 # Otherwise install deps
-deps_file="$unit_name/deps"
 test -f $deps_file && $0 `cat $deps_file`
 
 # Then install unit
