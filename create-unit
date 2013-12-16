@@ -14,9 +14,5 @@ touch $name/readme.md
 touch $name/install.sh
 touch $name/installed.sh
 
-which -s subl && {
-  subl $name/readme.md
-  subl $name/deps
-  subl $name/install.sh
-  subl $name/installed.sh
-}
+# Open all the files in sublime
+which -s subl && subl $name/*
