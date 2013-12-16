@@ -69,7 +69,7 @@ Run your unit with `install-unit`. Run all units with `kitout`.
 
 For convinence, you can specify which units should run first (instead of
 just letting kitout work it out from the dependency graph) by putting their
-names in the `first` file.
+names in the `priority-units` file.
 
 ## The Way of Kitout
 
