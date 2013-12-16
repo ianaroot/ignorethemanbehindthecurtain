@@ -9,5 +9,5 @@ priority_units=`cat priority-units | grep -v '^#'`
 
 # Then install the rest of the units
 
-all_units=`ls -d */ | sed 's/\///'`
+all_units=`ls -d */ | grep -v '^_' | sed 's/\///'`
 ./install-unit $all_units
