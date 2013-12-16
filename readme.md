@@ -57,8 +57,7 @@ use case is setting up DBC workstations).
 Kitout is okay with units that require manual operator intervention as Kitout is
 as much about documentation as it is about automation. In fact, if Kitout was a
 person it would suggest you first write your units as the kind that instruct the
-operator _before_ you investigate how to make them automated and non-
-interactive.
+operator _before_ you investigate how to make them automated and non-interactive.
 
 [boxen]: http://boxen.github.com
 [sprout-wrap]: https://github.com/pivotal-sprout/sprout-wrap
