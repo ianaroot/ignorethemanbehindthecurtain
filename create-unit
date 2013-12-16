@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+name=$1
+mkdir $name
+touch $name/deps
+touch $name/install.sh
+touch $name/installed.sh
+exec $EDITOR $name/install.sh
