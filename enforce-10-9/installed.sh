@@ -1,1 +1,1 @@
-test 10.9 = `sw_vers -productVersion`
+test `sw_vers -productVersion | grep '^10\.9'`
