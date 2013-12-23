@@ -43,7 +43,7 @@ test -f _blacklist && {
 
 # Exit if there's a guard file and the guard detects an install
 test -f $guard_file && sh $guard_file && {
-  echo "-* $unit_name installed"
+  echo "-* $unit_name already installed"
   exit
 }
 
@@ -59,3 +59,5 @@ test -f $guard_file && (sh $guard_file || {
   echo "-* $unit_name install script finished but installed test failed"
   exit 1
 })
+
+echo "-* $unit_name installed"
