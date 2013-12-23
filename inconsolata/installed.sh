@@ -1,1 +1,1 @@
-test -f /Library/Fonts/Inconsolata.otf
+test -f $HOME/Library/Fonts/Inconsolata.otf

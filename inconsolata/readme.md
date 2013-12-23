@@ -1,1 +1,1 @@
-Installs the Inconsolata font
+Inconsolata - the greatest of the programmer fonts
