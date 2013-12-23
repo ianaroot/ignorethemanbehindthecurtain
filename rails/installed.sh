@@ -1,1 +1,1 @@
-which -s rails
+gem query --name-matches '^rails$' --installed > /dev/null
