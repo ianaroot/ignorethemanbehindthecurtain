@@ -1,0 +1,1 @@
+An easy way to toggle the current git user (or pair of users) config based on their github username

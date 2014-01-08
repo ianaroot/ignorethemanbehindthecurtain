@@ -1,0 +1,1 @@
+which -s set-git-user
