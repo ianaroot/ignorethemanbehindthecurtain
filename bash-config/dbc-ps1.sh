@@ -30,7 +30,7 @@ line1_segments=(
   $space
   '\[' '\e' $reset_color '\]'
   # working dir
-  '\W'
+  '\w'
   '\[' '\e' $dark_gray '\]'
   $space
   # git ref
