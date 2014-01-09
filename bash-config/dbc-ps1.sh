@@ -19,19 +19,20 @@ function _ps1_git_repo_ref {
 
 dark_gray='[0;38;5;238m'
 light_gray='[0;38;5;250m'
+some_blue='[0;38;5;32m'
 reset_color='[m'
 
 space='\040'
 
 line1_segments=(
-  '\[' '\e' $dark_gray '\]'
+  '\[' '\e' $some_blue '\]'
   # git user
   '`_ps1_git_username`'
   $space
   '\[' '\e' $reset_color '\]'
   # working dir
   '\w'
-  '\[' '\e' $dark_gray '\]'
+  '\[' '\e' $some_blue '\]'
   $space
   # git ref
   '`_ps1_git_repo_ref`'
