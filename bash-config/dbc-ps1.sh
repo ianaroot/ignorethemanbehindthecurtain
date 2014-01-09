@@ -13,8 +13,11 @@ function _ps1_git_username {
 }
 
 function _ps1_git_repo_ref {
-  local ref=`git branch --no-color 2> /dev/null | sed 's/* //'`
-  test "$ref" && echo "$ref "
+  local ref=`git symbolic-ref -q HEAD 2>/dev/null`
+  test -n "$ref" &&
+    ref=${ref#refs/heads/} ||
+    ref=`git rev-parse --short HEAD 2>/dev/null`
+  echo "$ref "
 }
 
 dark_gray='[0;38;5;238m'
