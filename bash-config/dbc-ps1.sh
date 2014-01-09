@@ -17,7 +17,7 @@ function _ps1_git_repo_ref {
   test -n "$ref" &&
     ref=${ref#refs/heads/} ||
     ref=`git rev-parse --short HEAD 2>/dev/null`
-  echo "$ref "
+  test $ref && echo "($ref) "
 }
 
 dark_gray='[0;38;5;238m'
@@ -28,20 +28,18 @@ reset_color='[m'
 space='\040'
 
 line1_segments=(
+  '\n'
   '\[' '\e' $some_blue '\]'
   # git user
   '`_ps1_git_username`'
   $space
-  '\[' '\e' $reset_color '\]'
-  # working dir
-  '\w'
-  '\[' '\e' $some_blue '\]'
-  $space
   # git ref
   '`_ps1_git_repo_ref`'
   '\[' '\e' $reset_color '\]'
-  '\[' '\e' $light_gray '\]'
+  # working dir
+  '\w'
   '\n'
+  '\[' '\e' $light_gray '\]'
   '$'
   '\[' '\e' $reset_color '\]'
   $space
