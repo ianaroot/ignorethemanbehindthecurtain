@@ -37,6 +37,7 @@ line1_segments=(
   '`_ps1_git_repo_ref`'
   '\[' '\e' $reset_color '\]'
   '\[' '\e' $light_gray '\]'
+  '\n'
   '$'
   '\[' '\e' $reset_color '\]'
   $space
