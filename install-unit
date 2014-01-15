@@ -12,6 +12,12 @@ test $2 && {
 
 # ---
 
+function msg {
+  local blue="\e[0;34m"
+  local reset="\e[m\n"
+  printf "$blue$1$reset\n"
+}
+
 unit_name=$1
 unit_dir=$unit_name
 test -d _units/$unit_name && unit_dir=_units/$unit_name
@@ -21,20 +27,20 @@ guard_file="$unit_dir/installed.sh"
 install_file="$unit_dir/install.sh"
 
 test -d $unit_dir || {
-  echo "-* $unit_name not found"
+  msg "-* $unit_name not found"
   exit 1
 }
 
 # Skip if this unit or any deps are blacklisted
 test -f _blacklist && {
   (grep -v '^#' _blacklist | grep -x -q "^$unit_name\$" -) && {
-    echo "-* skipping blacklisted $unit_name"
+    msg "-* skipping blacklisted $unit_name"
     exit
   }
   test -f $deps_file && {
     for dep_name in `<$deps_file` ; do
       (grep -v '^#' _blacklist | grep -x -q $dep_name -) && {
-        echo "-* skipping $unit_name due to blacklisted dep $dep_name"
+        msg "-* skipping $unit_name due to blacklisted dep $dep_name"
         exit
       }
     done
@@ -43,7 +49,7 @@ test -f _blacklist && {
 
 # Exit if there's a guard file and the guard detects an install
 test -f $guard_file && sh $guard_file && {
-  echo "-* $unit_name installed"
+  msg "-* $unit_name installed"
   exit
 }
 
@@ -51,11 +57,11 @@ test -f $guard_file && sh $guard_file && {
 test -f $deps_file && $0 `cat $deps_file`
 
 # Then install unit
-echo "-* installing $unit_name"
+msg "-* installing $unit_name"
 sh $install_file
 
 # Exit error if the guard still doesn't pass after install
 test -f $guard_file && (sh $guard_file || {
-  echo "-* $unit_name install script finished but installed test failed"
+  msg "-* $unit_name install script finished but installed test failed"
   exit 1
 })
