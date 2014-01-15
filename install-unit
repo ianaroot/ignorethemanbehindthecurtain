@@ -66,4 +66,4 @@ test -f $guard_file && (sh $guard_file || {
   exit 1
 })
 
-echo "-* $unit_name installed"
+msg "-* $unit_name installed"
