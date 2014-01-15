@@ -1,1 +1,1 @@
-rbenv versions --bare | grep -q 2.0.0
+which rbenv && rbenv versions --bare | grep -q 2.0.0
