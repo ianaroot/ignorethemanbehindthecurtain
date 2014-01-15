@@ -1,4 +1,11 @@
 set -e
+test -d "$HOME/Library/Application Support/Sublime Text 2" || {
+  echo "Starting Sublime Text to generate local preferences directory, will kill in 10 seconds..."
+  open "$HOME/Applications/Sublime Text 2.app"
+  sleep 10
+  killall "Sublime Text 2"
+}
+
 mkdir -p _resources
 cd _resources
 test -d sublime-conf || git clone https://github.com/quackingduck/sublime-conf.git
