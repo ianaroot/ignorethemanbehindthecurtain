@@ -1,4 +1,5 @@
 enforce-10-9
+os-software-update
 xcode
 remote-login
 remote-management
