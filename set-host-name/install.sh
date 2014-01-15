@@ -6,8 +6,8 @@ mac_address=`ifconfig en0 | grep '\bether\b' | sed 's/.ether //'`
 host_num=`cat host-numbers-to-mac-addresses | grep '^\d' | grep $mac_address | cut -d ' ' -f 1`
 
 test $host_num || {
-	echo "Unknown host number for this mac address ($mac_address). Is this a new machine?"
-	exit 1
+  echo "Skipping"
+  exit
 }
 
 # Set the host name based on the machine number

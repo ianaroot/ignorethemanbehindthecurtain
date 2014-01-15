@@ -7,7 +7,8 @@ host_num=`cat host-numbers-to-mac-addresses | grep '^\d' | grep $mac_address | c
 
 test $host_num || {
   echo "Unknown host number for this mac address ($mac_address). Is this a new machine?"
-  exit 1
+  # We still exit with success because this unit is optional
+  exit
 }
 
 test "dbc${host_num}.local" = `hostname`
