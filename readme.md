@@ -8,8 +8,8 @@ how a currently manual step could be automated.
 
 ## Prerequsites
 
-A clean install of OS X 10.9 (Mavericks). The username should be `apprentice`. Ask
-[myles@devbootcamp.com](mailto:myles@devbootcamp.com) for the password.
+A clean install of OS X 10.9 (Mavericks). The username should be `apprentice`,
+the password should be `mvclover`, which should be typed ironically.
 
 ## Kitout a DBC Workstation
 
