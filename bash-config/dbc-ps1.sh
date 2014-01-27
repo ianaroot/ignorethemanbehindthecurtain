@@ -1,3 +1,8 @@
+# include the git-prompt helpers provided with the git package
+source '/usr/local/etc/bash_completion.d/git-prompt.sh'
+# configure git-prompt
+export GIT_PS1_SHOWDIRTYSTATE=true
+
 function _ps1_join {
   local s=''
   for arg in $@
@@ -10,14 +15,6 @@ function _ps1_git_username {
   local git_user=`git config --global user.name`
   test "$git_user" && echo "$git_user" && return
   echo "No Git User"
-}
-
-function _ps1_git_repo_ref {
-  local ref=`git symbolic-ref -q HEAD 2>/dev/null`
-  test -n "$ref" &&
-    ref=${ref#refs/heads/} ||
-    ref=`git rev-parse --short HEAD 2>/dev/null`
-  test $ref && echo "($ref) "
 }
 
 dark_gray='[0;38;5;238m'
@@ -34,7 +31,7 @@ line1_segments=(
   '`_ps1_git_username`'
   $space
   # git ref
-  '`_ps1_git_repo_ref`'
+  '`__git_ps1`'
   '\[' '\e' $reset_color '\]'
   # working dir
   '\w'
