@@ -29,9 +29,9 @@ line1_segments=(
   '\[' '\e' $some_blue '\]'
   # git user
   '`_ps1_git_username`'
-  $space
   # git ref
   '`__git_ps1`'
+  $space
   '\[' '\e' $reset_color '\]'
   # working dir
   '\w'
