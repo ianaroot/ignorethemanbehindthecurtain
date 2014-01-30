@@ -12,7 +12,7 @@ key_mappings=$(defaults -currentHost read -g "com.apple.keyboard.modifiermapping
 
 if [[ $key_mappings == *"HIDKeyboardModifierMappingDst = 2;
         HIDKeyboardModifierMappingSrc = 0;"* ]]
-    then echo '0'
+    then exit 0
 else
-    echo '1'
+    exit 1
 fi
