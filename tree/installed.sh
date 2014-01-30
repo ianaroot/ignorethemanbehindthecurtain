@@ -1,1 +1,1 @@
-brew list | grep -w tree
+brew list | grep -x tree
