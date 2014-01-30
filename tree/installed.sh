@@ -1,1 +1,1 @@
-brew list | grep -x tree
+which -s tree
