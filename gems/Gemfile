@@ -1,0 +1,35 @@
+source 'https://rubygems.org'
+
+# utility gems
+gem 'debugger'
+gem 'pry'
+gem 'seeing_is_believing'
+gem 'rspec'
+gem 'better_errors'
+
+# Phase 1
+gem 'nokogiri'
+gem 'sqlite3'
+gem 'faker'
+
+# Phase 2
+gem 'bcrypt-ruby'
+gem 'carrierwave'
+gem 'factory_girl'
+gem 'nokogiri'
+gem 'oauth'
+gem 'oauth2'
+gem 'pg'
+gem 'redis'
+gem 'sidekiq'
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'twitter'
+gem 'thin'
+gem 'shotgun'
+
+# Phase 3
+gem 'capybara'
+gem 'dalli'
+
+
