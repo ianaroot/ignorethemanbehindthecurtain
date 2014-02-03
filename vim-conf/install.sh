@@ -6,7 +6,7 @@
 set -e
 
 # Get the directory of the unit
-UNIT_DIR=$(cd $(dirname $0); pwd)
+unit_dir=$(cd $(dirname $0); pwd)
 
 # Create a .vim directory and a backup directory since our basic .vimrc will
 # put backup files into it.  This helps prevent littering of swapfiles
@@ -14,4 +14,4 @@ UNIT_DIR=$(cd $(dirname $0); pwd)
 mkdir -p $HOME/.vim/backup
 
 # Copy the basic vimrc $HOME
-cp $UNIT_DIR/basic-vimrc.vim ~/.vimrc
+cp $unit_dir/basic-vimrc.vim ~/.vimrc
