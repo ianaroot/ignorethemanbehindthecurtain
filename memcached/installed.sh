@@ -1,1 +1,1 @@
-brew list | grep -x memcached
+brew list | grep --quiet -x memcached
