@@ -22,8 +22,11 @@ set tabstop=2
 " Allow me to change buffers without saving
 set hidden
 
-" Do not leave scrap files everywhere
-set bdir=~/.vim/backup
+" Do not create backup files
+set nobackup
+
+" Do not create swap files
+set noswapfile
 
 " Be a good .git user
 augroup gitcommit
