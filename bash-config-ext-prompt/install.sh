@@ -1,8 +1,5 @@
 set -e
 
-read -p "This will delete ~/.bash_profile.d/prompt.sh press y to proceed: " confirm
-test $confirm = 'y' -o $confirm = 'Y'
-
 bashExtDir="$HOME/.bash_profile.d"
 mkdir -p $bashExtDir
 

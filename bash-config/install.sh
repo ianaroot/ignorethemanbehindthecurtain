@@ -1,8 +1,5 @@
 set -e
 
-read -p "This will delete ~/.bash_profile, ~/.inputrc and ~/.ps1 press y to proceed: " confirm
-test $confirm = 'y' -o $confirm = 'Y'
-
 dir=$(cd $(dirname $0); pwd)
 
 mkdir -p "$HOME/.bash_profile.d"
