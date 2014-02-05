@@ -47,7 +47,7 @@ test $subl &&
 
 # ---
 
-# For rubby development
+# For ruby development
 which -s bundle && alias be="bundle exec"
 
 # ---
