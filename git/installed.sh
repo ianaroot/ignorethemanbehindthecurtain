@@ -1,1 +1,1 @@
-brew list | grep "^git$"
+brew list | grep --quiet -x git
