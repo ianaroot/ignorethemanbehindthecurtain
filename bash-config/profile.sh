@@ -39,12 +39,6 @@ _look_for_executables_in "$HOME/bin"
 
 # ---
 
-# A custom fancy prompt
-test -f  "$HOME/.ps1" &&
-  source "$HOME/.ps1"
-
-# ---
-
 # Set sublime to the default editor and alias it to `e` if it is present
 subl=`which subl`
 test $subl &&
