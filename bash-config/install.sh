@@ -5,6 +5,8 @@ test $confirm = 'y' -o $confirm = 'Y'
 
 dir=$(cd $(dirname $0); pwd)
 
+mkdir -p "$HOME/.bash_profile.d"
+
 rm -rf "$HOME/.ps1"
 ln -s "$dir/dbc-ps1.sh" "$HOME/.ps1"
 
