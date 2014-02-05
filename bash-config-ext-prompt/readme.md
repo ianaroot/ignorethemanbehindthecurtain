@@ -1,1 +1,1 @@
-A bash prompt for DBc workstations, which includes git users.
+A bash prompt for DBC workstations, which includes git users.
