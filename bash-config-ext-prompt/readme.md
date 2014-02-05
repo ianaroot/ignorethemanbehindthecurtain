@@ -1,0 +1,1 @@
+A bash prompt for DBc workstations, which includes git users.
