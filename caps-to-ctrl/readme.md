@@ -1,3 +1,8 @@
-Using developer tools like terminals and text editors requires frequent depression of the control key. Since the caps lock key is generally where your pinky rests on the keyboard, the control key is an awkward spot to reach with your left pinky.
+Using developer tools like terminals and text editors requires frequent
+depression of the control key. Unfortunately, this key is an awkward spot to
+reach with your left pinky.
 
-This unit maps the left control key to caps lock, effectively creating a new pinky-optimized control button. Also, when are you ever using caps lock?
+This unit makes the caps lock key do the same thing the control key does.
+The caps lock key is generally where your pinky rests on the keyboard,
+which makes it much easier to press often. Also, when are you ever using
+all caps?
