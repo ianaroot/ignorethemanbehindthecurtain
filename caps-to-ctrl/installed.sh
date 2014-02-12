@@ -1,16 +1,22 @@
 dir=$(cd $(dirname $0); pwd)
-common_functions_file="${dir}/common_functions.sh"
+product_id="${dir}/product_id.sh"
+vendor_id="${dir}/vendor_id.sh"
 
-if [ -e "$common_functions_file" ]; then
-  echo "sourcing $common_functions_file"
-  source "$common_functions_file"
+if [ -e "$vendor_id" ] && [ -e "$product_id" ]; then
+  source "$vendor_id"
+  source "$product_id"
 else
-  echo "Could not find common functions"
+  echo "Could not find vendor_id & product_id scripts"
 fi
 
-key_mappings=$(defaults -currentHost read -g "com.apple.keyboard.modifiermapping."$vendor_id"-"$product_id"-0")
+keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $3)}' | tr '\ ' -)
+keyboard_2=$(echo $vendor_ids $product_ids | awk '{print ($2, $4)}' | tr '\ ' -)
 
-if [[ $key_mappings == *"HIDKeyboardModifierMappingDst = 2;
+key_mappings_1=$(defaults -currentHost read -g "com.apple.keyboard.modifiermapping."$keyboard_1"-0")
+key_mappings_2=$(defaults -currentHost read -g "com.apple.keyboard.modifiermapping."$keyboard_2"-0")
+
+if [[ $key_mappings_1 == *"HIDKeyboardModifierMappingDst = 2;
+        HIDKeyboardModifierMappingSrc = 0;"* ]] && [[ $key_mappings_2 == *"HIDKeyboardModifierMappingDst = 2;
         HIDKeyboardModifierMappingSrc = 0;"* ]]
     then exit 0
 else

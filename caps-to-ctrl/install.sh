@@ -1,11 +1,21 @@
 dir=$(cd $(dirname $0); pwd)
-common_functions_file="${dir}/common_functions.sh"
+product_id="${dir}/product_id.sh"
+vendor_id="${dir}/vendor_id.sh"
 
-if [ -e "$common_functions_file" ]; then
-  echo "sourcing $common_functions_file"
-  source "$common_functions_file"
+if [ -e "$vendor_id" ] && [ -e "$product_id" ]; then
+  source "$vendor_id"
+  source "$product_id"
 else
-  echo "Could not find common functions"
+  echo "Could not find vendor_id & product_id scripts"
 fi
 
-defaults -currentHost write -g com.apple.keyboard.modifiermapping.{$vendor_id}-{$product_id}-0 -array-add '<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>'
+keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $3)}' | tr '\ ' -)
+keyboard_2=$(echo $vendor_ids $product_ids | awk '{print ($2, $4)}' | tr '\ ' -)
+
+# http://apple.stackexchange.com/questions/13598/updating-modifier-key-mappings-through-defaults-command-tool
+function map_keys {
+defaults -currentHost write -g com.apple.keyboard.modifiermapping."$1"-0 -array-add '<dict><key>HIDKeyboardModifierMappingDst</key><integer>2</integer><key>HIDKeyboardModifierMappingSrc</key><integer>0</integer></dict>'
+}
+
+map_keys $keyboard_1
+map_keys $keyboard_2
