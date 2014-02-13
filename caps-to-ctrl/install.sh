@@ -1,13 +1,5 @@
-dir=$(cd $(dirname $0); pwd)
-product_id="${dir}/product_id.sh"
-vendor_id="${dir}/vendor_id.sh"
-
-if [ -e "$vendor_id" ] && [ -e "$product_id" ]; then
-  source "$vendor_id"
-  source "$product_id"
-else
-  echo "Could not find vendor_id & product_id scripts"
-fi
+vendor_ids=$(source vendor_ids.sh)
+product_ids=$(source product_ids.sh)
 
 keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $3)}' | tr '\ ' -)
 keyboard_2=$(echo $vendor_ids $product_ids | awk '{print ($2, $4)}' | tr '\ ' -)
