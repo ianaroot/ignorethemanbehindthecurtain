@@ -1,9 +1,10 @@
 set -e
 
+unit_dir=$(cd $(dirname $0); pwd)
 extDir="$HOME/Library/Application Support/Google/Chrome/External Extensions"
 mkdir -p "$extDir"
 
-extId=`cat ./extension-id`
+extId=`cat $unit_dir/extension-id`
 extFile=$extDir'/'$extId'.json'
 
 # the update url was built by reverse engineering a plugin installed
