@@ -1,5 +1,5 @@
-vendor_ids=$(source vendor_ids.sh)
-product_ids=$(source product_ids.sh)
+vendor_ids=$(./vendor_ids)
+product_ids=$(./product_ids)
 
 keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $3)}' | tr '\ ' -)
 keyboard_2=$(echo $vendor_ids $product_ids | awk '{print ($2, $4)}' | tr '\ ' -)
