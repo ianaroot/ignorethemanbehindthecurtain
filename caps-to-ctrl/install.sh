@@ -1,16 +1,13 @@
-dir=$(cd $(dirname $0); pwd)
-product_id="${dir}/product_id.sh"
-vendor_id="${dir}/vendor_id.sh"
-
-if [ -e "$vendor_id" ] && [ -e "$product_id" ]; then
-  source "$vendor_id"
-  source "$product_id"
-else
-  echo "Could not find vendor_id & product_id scripts"
-fi
+vendor_ids=$(./vendor_ids)
+product_ids=$(./product_ids)
 
 keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $3)}' | tr '\ ' -)
 keyboard_2=$(echo $vendor_ids $product_ids | awk '{print ($2, $4)}' | tr '\ ' -)
+
+if (($(echo $vendor_ids | wc -w)<2))
+    then
+    keyboard_1=$(echo $vendor_ids $product_ids | awk '{print ($1, $2)}' | tr '\ ' -)
+fi
 
 # http://apple.stackexchange.com/questions/13598/updating-modifier-key-mappings-through-defaults-command-tool
 function map_keys {
