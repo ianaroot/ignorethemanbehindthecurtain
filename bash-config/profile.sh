@@ -2,9 +2,9 @@
 # $HOME/.bash_profile.d is where bash config extensions are
 # installed to make configuring bash more modular.
 test -d $HOME/.bash_profile.d && {
-  for configFile in `ls $HOME/.bash_profile.d/*.sh`
+  for file in `ls $HOME/.bash_profile.d/*.sh`
   do
-    source $configFile
+    source $file
   done
 }
 

@@ -1,9 +1,10 @@
 set -e
 
-bashExtDir="$HOME/.bash_profile.d"
-mkdir -p $bashExtDir
+bash_ext_dir="$HOME/.bash_profile.d"
+mkdir -p $bash_ext_dir
 
 dir=$(cd $(dirname $0); pwd)
 
-rm -rf "$bashExtDir/prompt.sh"
-ln -s "$dir/prompt.sh" "$bashExtDir/prompt.sh"
+rm -rf "$bash_ext_dir/prompt.sh"
+ln -s "$dir/prompt.sh" "$bash_ext_dir/prompt.sh"
+
