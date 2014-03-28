@@ -1,0 +1,182 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activemodel (4.0.3)
+      activesupport (= 4.0.3)
+      builder (~> 3.1.0)
+    activesupport (4.0.3)
+      i18n (~> 0.6, >= 0.6.4)
+      minitest (~> 4.2)
+      multi_json (~> 1.3)
+      thread_safe (~> 0.1)
+      tzinfo (~> 0.3.37)
+    addressable (2.3.5)
+    ast (1.1.0)
+    atomic (1.1.15)
+    backports (3.6.0)
+    bcrypt (3.1.7)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    buftok (0.2.0)
+    builder (3.1.4)
+    capybara (2.2.1)
+      mime-types (>= 1.16)
+      nokogiri (>= 1.3.3)
+      rack (>= 1.0.0)
+      rack-test (>= 0.5.4)
+      xpath (~> 2.0)
+    carrierwave (0.10.0)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+      json (>= 1.7)
+      mime-types (>= 1.16)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    coderay (1.1.0)
+    columnize (0.3.6)
+    connection_pool (1.2.0)
+    daemons (1.1.9)
+    dalli (2.7.0)
+    debugger (1.6.6)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.3.2)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.3.2)
+    diff-lcs (1.2.5)
+    equalizer (0.0.9)
+    erubis (2.7.0)
+    eventmachine (1.0.3)
+    factory_girl (4.4.0)
+      activesupport (>= 3.0.0)
+    faker (1.2.0)
+      i18n (~> 0.5)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
+    http (0.5.0)
+      http_parser.rb
+    http_parser.rb (0.6.0)
+    i18n (0.6.9)
+    json (1.8.1)
+    jwt (0.1.11)
+      multi_json (>= 1.5)
+    memoizable (0.4.0)
+      thread_safe (~> 0.1.3)
+    method_source (0.8.2)
+    mime-types (2.1)
+    mini_portile (0.5.2)
+    minitest (4.7.5)
+    multi_json (1.8.4)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
+    naught (1.0.0)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
+    oauth (0.4.7)
+    oauth2 (0.9.3)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 0.1.8)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (~> 1.2)
+    parser (2.1.5)
+      ast (~> 1.1)
+      slop (~> 3.4, >= 3.4.5)
+    pg (0.17.1)
+    pry (0.9.12.6)
+      coderay (~> 1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    rack (1.5.2)
+    rack-protection (1.5.2)
+      rack
+    rack-test (0.6.2)
+      rack (>= 1.0)
+    redis (3.0.7)
+    redis-namespace (1.4.1)
+      redis (~> 3.0.4)
+    rspec (2.14.1)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
+    rspec-core (2.14.8)
+    rspec-expectations (2.14.5)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.6)
+    seeing_is_believing (2.1.2)
+      parser (~> 2.1.4)
+    shotgun (0.9)
+      rack (>= 1.0)
+    sidekiq (2.17.7)
+      celluloid (>= 0.15.2)
+      connection_pool (>= 1.0.0)
+      json
+      redis (>= 3.0.6)
+      redis-namespace (>= 1.3.1)
+    simple_oauth (0.2.0)
+    sinatra (1.4.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
+    sinatra-contrib (1.4.2)
+      backports (>= 2.0)
+      multi_json
+      rack-protection
+      rack-test
+      sinatra (~> 1.4.0)
+      tilt (~> 1.3)
+    slop (3.4.7)
+    sqlite3 (1.3.9)
+    thin (1.6.1)
+      daemons (>= 1.0.9)
+      eventmachine (>= 1.0.0)
+      rack (>= 1.0.0)
+    thread_safe (0.1.3)
+      atomic
+    tilt (1.4.1)
+    timers (1.1.0)
+    twitter (5.7.1)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.9)
+      faraday (~> 0.9.0)
+      http (~> 0.5.0)
+      http_parser.rb (~> 0.6.0)
+      json (~> 1.8)
+      memoizable (~> 0.4.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.2.0)
+    tzinfo (0.3.38)
+    xpath (2.0.0)
+      nokogiri (~> 1.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt-ruby
+  better_errors
+  capybara
+  carrierwave
+  dalli
+  debugger
+  factory_girl
+  faker
+  nokogiri
+  oauth
+  oauth2
+  pg
+  pry
+  redis
+  rspec
+  seeing_is_believing
+  shotgun
+  sidekiq
+  sinatra
+  sinatra-contrib
+  sqlite3
+  thin
+  twitter
