@@ -11,4 +11,6 @@ test $host_num || {
 }
 
 # Set the host name based on the machine number
-sudo hostname "dbc${host_num}.local"
+sudo scutil --set ComputerName "dbc${host_num}.local"
+sudo scutil --set LocalHostName "dbc${host_num}.local"
+sudo scutil --set HostName "dbc${host_num}.local"
