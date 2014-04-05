@@ -1,1 +1,2 @@
-[[ $(defaults read NSGlobalDomain KeyRepeat) == 2 ]] || exit 1
+[[ $(defaults read NSGlobalDomain KeyRepeat) == 2 &&
+$(defaults read NSGlobalDomain InitialKeyRepeat) == 15 ]] || exit 1
