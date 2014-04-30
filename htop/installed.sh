@@ -1,1 +1,1 @@
-brew list | grep -x htop
+brew list | grep -x --quiet htop-osx
