@@ -32,7 +32,9 @@ If you are installing Kitout on a personal machine, it is likely that you will
 want to blacklist some Kitout defaults. To do so, first install kitout as
 [described above](#kitout-a-dbc-workstation). Before running `./kitout` create
 a `_blacklist` file, which is a list of units you want to exclude from
-installation on your machine. An example `_blacklist` might look like:
+installation on your machine. You don't need to blacklist programs you
+already have installed.  Kitout will check for a package before installing it.
+An example `_blacklist` might look like:
 
     # Don't allow people to ssh into my machine
     remote-login
@@ -45,11 +47,12 @@ Now run kitout and blacklisted units will be skipped
 
     ./kitout
 
+
 ## Usage & Development
 
 This is how you modify Kitout:
 
-First, create a unit: `./create-unit unit-name`. A unit is a folder. A unit 
+First, create a unit: `./create-unit unit-name`. A unit is a folder. A unit
 sets up **one** aspect of the machine. That's why it's called a unit.
 
 Units have four kind of files (that kitout cares about):
