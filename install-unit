@@ -53,8 +53,8 @@ test -f $guard_file && sh $guard_file && {
   exit
 }
 
-# Otherwise install deps
-test -f $deps_file && $0 `cat $deps_file`
+# Otherwise install deps (if the deps file contains some)
+test -s $deps_file && $0 `cat $deps_file`
 
 # Then install unit
 msg "-* installing $unit_name"
