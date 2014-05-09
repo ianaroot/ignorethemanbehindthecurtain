@@ -19,6 +19,7 @@ Install kitout
     # Changes the ownership of /usr/local to your user (not root)
     sudo chown -R $USER /usr/local
     cd /usr/local/opt
+    # Install git if prompted by the system
     git clone https://github.com/Devbootcamp/kitout.git
     cd kitout
 
