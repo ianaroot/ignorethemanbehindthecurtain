@@ -1,1 +1,1 @@
-test -d '/usr/local/Library/Taps/phinze-cask'
+brew tap | grep -q -x phinze/cask
