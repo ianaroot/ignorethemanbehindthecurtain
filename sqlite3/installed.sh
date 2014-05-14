@@ -1,1 +1,1 @@
-brew list | grep -x sqlite3
+brew list | grep -q -x sqlite
