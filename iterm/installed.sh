@@ -1,1 +1,1 @@
-test -d "~/Applications/iTerm.app"
+brew cask list | grep -q -x iterm2
