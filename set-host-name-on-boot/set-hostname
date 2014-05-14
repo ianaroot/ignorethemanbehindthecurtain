@@ -1,0 +1,2 @@
+#!/bin/sh
+sh /usr/local/opt/kitout/set-host-name/install.sh
