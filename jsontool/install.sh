@@ -1,1 +1,1 @@
-npm install -g jsontool
+npm install -g json
