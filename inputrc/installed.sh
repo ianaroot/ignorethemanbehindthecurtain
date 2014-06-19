@@ -1,0 +1,1 @@
+test -e $HOME/.inputrc
