@@ -1,2 +1,2 @@
-[[ $(defaults read NSGlobalDomain KeyRepeat) == 2 &&
-$(defaults read NSGlobalDomain InitialKeyRepeat) == 15 ]] || exit 1
+[[ $(defaults read NSGlobalDomain KeyRepeat) 2> /dev/null = 2 &&
+$(defaults read NSGlobalDomain InitialKeyRepeat) 2> /dev/null = 15 ]]  || exit 1
