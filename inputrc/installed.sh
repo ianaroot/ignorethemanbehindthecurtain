@@ -1,1 +1,1 @@
-test -e $HOME/.inputrc
+cat ~/.inputrc | grep -q "set bell-style visible"
