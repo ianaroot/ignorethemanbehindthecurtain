@@ -1,0 +1,1 @@
+export SGU_API_KEY=6e0e456f7da1e98fa1b9ed0cc709fdce2460f9f2
