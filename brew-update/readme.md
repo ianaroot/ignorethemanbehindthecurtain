@@ -1,1 +1,1 @@
-Updates and upgrades both brew and brew-casks
+Updates and upgrades both brew and brew-casks.  Also cleans up old/unused packages.
