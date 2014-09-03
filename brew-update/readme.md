@@ -1,0 +1,1 @@
+Updates and upgrades both brew and brew-casks

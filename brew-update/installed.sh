@@ -1,0 +1,1 @@
+find $TMPDIR -mmin -1440 | grep -q lastbrew.txt
