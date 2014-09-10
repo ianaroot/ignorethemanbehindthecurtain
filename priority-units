@@ -3,3 +3,4 @@ enforce-10-9
 os-software-update
 remote-login
 remote-management
+brew-update
