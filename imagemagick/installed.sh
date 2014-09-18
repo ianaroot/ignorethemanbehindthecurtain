@@ -1,1 +1,1 @@
-brew list | grep --quiet -x git
+brew list | grep --quiet -x imagemagick
