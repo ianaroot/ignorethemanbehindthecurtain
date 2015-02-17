@@ -1,1 +1,1 @@
-test -e "$HOME/.vimrc" && test -d "$HOME/.vim"
+test -e "$HOME/.vimrc"
