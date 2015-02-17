@@ -30,5 +30,6 @@ gem 'shotgun'
 # Phase 3
 gem 'capybara'
 gem 'dalli'
+gem 'rails'
 
 
