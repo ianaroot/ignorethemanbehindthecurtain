@@ -1,4 +1,5 @@
 set -e
+sleep 3
 test -d "$HOME/Library/Application Support/Sublime Text 2" || {
   echo "Starting Sublime Text to generate local preferences directory, will kill in 10 seconds..."
   subl /tmp/test.txt
