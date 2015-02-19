@@ -1,1 +1,1 @@
-brew cask install --force atom
+brew cask install atom

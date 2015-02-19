@@ -1,1 +1,1 @@
-test -d $HOME/Applications/"Atom.app"
+test -d "$HOME/Applications/Atom.app"
