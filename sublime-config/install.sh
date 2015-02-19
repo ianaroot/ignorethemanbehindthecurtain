@@ -1,5 +1,7 @@
 set -e
-sleep 3
+
+sleep 5
+
 test -d "$HOME/Library/Application Support/Sublime Text 2" || {
   echo "Starting Sublime Text to generate local preferences directory, will kill in 10 seconds..."
   subl /tmp/test.txt
@@ -9,6 +11,7 @@ test -d "$HOME/Library/Application Support/Sublime Text 2" || {
 
 mkdir -p _resources
 cd _resources
+# This dep is dangerous and should be moved to dbc
 test -d sublime-conf || git clone https://github.com/quackingduck/sublime-conf.git
 cd sublime-conf
 test -d "$HOME/Library/Application Support/Sublime Text 2/Packages" &&

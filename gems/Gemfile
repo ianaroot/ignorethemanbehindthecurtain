@@ -4,8 +4,9 @@ source 'https://rubygems.org'
 gem 'debugger'
 gem 'pry'
 gem 'seeing_is_believing'
-gem 'rspec'
+gem 'rspec', ' ~> 2.99'
 gem 'better_errors'
+gem 'binding_of_caller'
 
 # Phase 1
 gem 'nokogiri'
@@ -30,6 +31,6 @@ gem 'shotgun'
 # Phase 3
 gem 'capybara'
 gem 'dalli'
-gem 'rails'
+gem 'rails', '= 4.1.3'
 
 
