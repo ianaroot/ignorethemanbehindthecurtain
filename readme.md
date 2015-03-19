@@ -8,7 +8,7 @@ how a currently manual step could be automated.
 
 ## Prerequsites
 
-A clean install of OS X 10.9 (Mavericks). The username should be `apprentice`,
+A clean install of OS X 10.10 (Yosemite). The username should be `apprentice`,
 the password should be `mvclover`, which should be typed ironically.
 
 ## Kitout a DBC Workstation
