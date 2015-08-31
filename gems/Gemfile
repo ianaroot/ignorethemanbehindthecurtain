@@ -7,6 +7,8 @@ gem 'seeing_is_believing'
 gem 'rspec', ' ~> 2.99'
 gem 'better_errors'
 gem 'binding_of_caller'
+gem 'byebug'
+gem 'pry-byebug'
 
 # Phase 1
 gem 'nokogiri'
