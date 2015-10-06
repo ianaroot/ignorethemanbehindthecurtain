@@ -1,1 +1,1 @@
-rbenv install 2.2.3
+rbenv install 2.0.0-p647
